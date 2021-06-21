@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="es" dir="ltr">
+<head>
+    <link th:href="@{index.css}" rel="stylesheet" />
+    <meta charset="utf-8">
+    <title> Juego de Picas y Famas</title>
+
+</head>
+<body>
+<h1> Juego Picas y Famas </h1>
+<p th:text="'Numero: ' + ${adivinar}" />
+<p>Adivina el numero que genera la computadora para esto te daremos 2 ayudas,
+una que te dira si el digito esta en la misma posisicon dentro del numero que
+    quieres adivinar y otra que te dira si el digito esta dentro del numero </p>
+
+
+
+<form action="/" method="post">
+    <p>Ingrese el numero: <input type="text"  name="siguiente"/></p>
+    <p><input  type="submit" name="jugar" value="Jugar" />
+        <input type="submit" name="restaurar" value="Restaurar" /></p>
+</form>
+<p th:text="'Siguiente Numero = ' + ${siguiente}" />
+<p th:text="'Siguiente Resultado =  ' + ${resultado}" />
+
+</body>
+</html>
