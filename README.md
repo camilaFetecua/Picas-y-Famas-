@@ -33,6 +33,7 @@
       
 # Diagrama de clases  
 
+
 ![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/Diagrama%20de%20clases.PNG)
 
   Para este proyecto usamos solo una clase PicasYFamasApplication, donde implementamos el juego. 
