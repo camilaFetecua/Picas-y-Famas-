@@ -18,16 +18,11 @@
   Para empezar debemos clonar el repositorio con el siguiente comando:
 
      git clone https://github.com/camilaFetecua/Picas-y-Famas-.git
-
-  
-  Debemos ir al directorio raiz y se debe ejecutar el comando:
- 
-       mvn package
   
    
-  Para ejecutar el proyecto se debe utilizar el siguiente comando 
+  Para ejecutar el proyecto  desde git debemos ingresar al siguiente enlace 
 
-   java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arsw.PicasYFamas
+  https://picasyfamas-arsw2021i.herokuapp.com/
      
  
       
