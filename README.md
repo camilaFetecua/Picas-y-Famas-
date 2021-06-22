@@ -1,7 +1,7 @@
-# SERVIDOR WEB CONCURRENTE
-## Taller ARSW 2021-i / 18 Junio del 2021
+# Juego Picas y famas 
+## Taller ARSW 2021-i / 21 Junio del 2021
 
-  Este repositorio muestre una versión concurrente de su servidor web. 
+  
 
 # Prerequisitos 
   + Git version 2.25.1
@@ -17,7 +17,8 @@
 
   Para empezar debemos clonar el repositorio con el siguiente comando:
 
-     git clone https://github.com/camilaFetecua/ServidorConcurrente.git
+     git clone https://github.com/camilaFetecua/Picas-y-Famas-.git
+
   
   Debemos ir al directorio raiz y se debe ejecutar el comando:
  
@@ -26,34 +27,35 @@
    
   Para ejecutar el proyecto se debe utilizar el siguiente comando 
 
-     java -cp ServidorConcurrente-1.0-SNAPSHOT.jar edu.escuelaing.arsw.HttpServer
+   java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arsw.PicasYFamas
      
  
       
 # Diagrama de clases  
 
-![Imagen](https://github.com/camilaFetecua/TallerHeroku/blob/master/Imagenes/Clasesservifot.PNG)
 
-  Para este proyecto tenemos 6 clases y una interfaz 
-  + HttpServer: Clase donde implementamos y corremos nuestro servidor. 
-  + SocketClient : Clase donde se atiende cada peticion del cliente.
-  + ChooserR : Clase  utilizada por el SocketClient para escoger el WriterR y su ejecucuion. 
-  + Writerl: Clase utilizada para retornar la image. 
-  + TextWriter: Clase utilizada para retornar el texto de un archivo. 
-  + WriteE: Clase utilizada para retornar un Html.
-  + WriterR: Clase que puede ser usada cuando el tipo de archivo no es compatible. 
- 
+![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/Diagrama%20de%20clases.PNG)
+
+  Para este proyecto usamos solo una clase PicasYFamasApplication, donde implementamos el juego. 
+  
  # Pruebas 
  
- Para pruebas usamos JMeter el cual es un programa diseñado para realizar pruebas de carga en servidores o aplicativos Web por medio del protocolo HTTP.Para esto realizamos un peticion de 500 a la pagina mypage.html de manera concurrente y los resultados obtenidos fueron los siguientes:
+ Para pruebas usamos la aplicacion intentando adivina un numero aleatorio que nos da el sistema 
  
- ![Imagen](https://github.com/camilaFetecua/TallerHeroku/blob/master/Imagenes/Prueba1.PNG)
+ ![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/Juego.PNG)
 
-La imagen anterior muestra que las peticiones fueron tomadas exitosamente. 
+Entonces empamos a escribir un numero para empezar a adivinar en este caso pusimos el 5 y nos arrojo una pista, que es que tiene una fama
  
- ![Imagen](https://github.com/camilaFetecua/TallerHeroku/blob/master/Imagenes/Prueba2.PNG)
+ ![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/pista1.PNG)
  
- Y en la imagen anterior podemos observar los resultados en forma de arbol con su tiempo de carga 
+De segundas pusimos el numero 0 , y no nos arrojo ninguna pista que es que tiene una pica
+
+ ![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/piesta2.PNG)
+
+Y asi sucesivamente pusimos el numero 50 , hasta que llegamos al numero 5047 con todas las pistas y nos arroja el mensaje de que adivinamos el numero.
+
+ ![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/pista3.PNG)
+ ![Imagen](https://github.com/camilaFetecua/Picas-y-Famas-/blob/master/Imagenes/pista4.PNG)
  
 # Licencia
 
